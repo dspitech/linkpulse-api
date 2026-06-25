@@ -1,6 +1,7 @@
 """Schemas Pydantic - contrats d'entree/sortie de l'API LinkPulse."""
 
 from datetime import datetime
+
 from pydantic import BaseModel, Field, HttpUrl
 
 

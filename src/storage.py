@@ -8,8 +8,7 @@ en gardant un fichier local simple en developpement.
 import os
 import sqlite3
 from contextlib import contextmanager
-from datetime import datetime, timezone
-from typing import Optional
+from datetime import UTC, datetime
 
 DB_PATH = os.environ.get("DB_PATH", "linkpulse.db")
 
@@ -52,12 +51,11 @@ def code_exists(code: str) -> bool:
 
 
 def create_link(code: str, url: str) -> dict:
-    created_at = datetime.now(timezone.utc).isoformat()
+    created_at = datetime.now(UTC).isoformat()
 
     with get_connection() as conn:
         conn.execute(
-            "INSERT INTO links (code, url, created_at, clicks, active) "
-            "VALUES (?, ?, ?, 0, 1)",
+            "INSERT INTO links (code, url, created_at, clicks, active) VALUES (?, ?, ?, 0, 1)",
             (code, url, created_at),
         )
         conn.commit()
@@ -71,7 +69,7 @@ def create_link(code: str, url: str) -> dict:
     }
 
 
-def get_link(code: str) -> Optional[dict]:
+def get_link(code: str) -> dict | None:
     with get_connection() as conn:
         row = conn.execute(
             "SELECT * FROM links WHERE code = ?",
@@ -113,8 +111,6 @@ def deactivate_link(code: str) -> bool:
 
 def count_active_links() -> int:
     with get_connection() as conn:
-        row = conn.execute(
-            "SELECT COUNT(*) AS total FROM links WHERE active = 1"
-        ).fetchone()
+        row = conn.execute("SELECT COUNT(*) AS total FROM links WHERE active = 1").fetchone()
 
     return row["total"] if row else 0

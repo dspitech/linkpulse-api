@@ -17,13 +17,10 @@ def generate_unique_code() -> str:
     62^6 combinaisons possibles) avant d'abandonner explicitement.
     """
     for _ in range(MAX_ATTEMPTS):
-        candidate = "".join(
-            secrets.choice(ALPHABET) for _ in range(CODE_LENGTH)
-        )
+        candidate = "".join(secrets.choice(ALPHABET) for _ in range(CODE_LENGTH))
         if not code_exists(candidate):
             return candidate
 
     raise RuntimeError(
-        "Impossible de generer un code court unique apres "
-        f"{MAX_ATTEMPTS} tentatives."
+        f"Impossible de generer un code court unique apres {MAX_ATTEMPTS} tentatives."
     )
