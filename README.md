@@ -2501,8 +2501,9 @@ echo " Terminé !"
 chmod +x lien.sh
 ```
 
-```bash
 - Lancer le fichier
+
+```bash
 ./lien.sh
 ```
 
@@ -2516,7 +2517,7 @@ chmod +x lien.sh
 ![image](https://hackmd.io/_uploads/H1RghK5MMl.png)
 
 
-- 1. Vérifier que le service est UP
+-  Vérifier que le service est UP
 
 ```promql
 up{job="linkpulse-api"}
@@ -2526,7 +2527,7 @@ up{job="linkpulse-api"}
 
 ![image](https://hackmd.io/_uploads/SJ2SXYSMfg.png)
 
-- 2. Nombre total de liens créés
+-  Nombre total de liens créés
 
 ```pormql
 links_created_total
@@ -2536,7 +2537,7 @@ links_created_total
 ![image](https://hackmd.io/_uploads/HyP32F5fMx.png)
 
 
-- 3. Taux de création de liens (par minute)
+-  Taux de création de liens (par minute)
 
 ```promql
 rate(links_created_total[1m])
@@ -2544,7 +2545,7 @@ rate(links_created_total[1m])
 
 ![image](https://hackmd.io/_uploads/H1HpXtBGfg.png)
 
-- 4. Nombre total de clics
+-  Nombre total de clics
 
 Générer des clics
 
@@ -2620,7 +2621,7 @@ sum(redirects_total)
 
 ![image](https://hackmd.io/_uploads/ByhOutrGfe.png)
 
-- 6. Liens actifs
+-  Liens actifs
 
 ```promql
 active_links_gauge
