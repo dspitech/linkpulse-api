@@ -1,0 +1,24 @@
+# Depot Git - inutile dans l'image
+.git/
+.github/
+# Artefacts Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+htmlcov/
+coverage.xml
+# Secrets et environnements locaux
+.env
+.env.*
+# Bases de donnees locales
+linkpulse.db
+test_linkpulse.db
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+# Dossiers non necessaires a l'image (utilises par Jenkins/Terraform a part)
+infra/
+monitoring/
+README.md

@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  linkpulse-api:
+    build: .
+    container_name: linkpulse-dev
+    ports:
+      - "8000:8000"   # hote:conteneur
+    environment:
+      - DB_PATH=/data/linkpulse.db
+      - BASE_URL=http://localhost:8000
+    volumes:
+      - linkpulse-data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+volumes:
+  linkpulse-data:
