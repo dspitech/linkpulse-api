@@ -1041,9 +1041,6 @@ echo "Base de test supprimée"
 
 ---
 
-
----
-
 ## Phase 3 - Conteneurisation
 
 ### 3.1 `Dockerfile`
@@ -1249,7 +1246,6 @@ git tag -l
 ---
 
 
-
 ## Phase 4 - Jenkins
 
 ### 4.1 Lancer Jenkins, directement connecté à `cicd-network`
@@ -1443,8 +1439,6 @@ Créez un token GitHub (`repo`, `read:packages`, `write:packages`), puis :
 
 ![image](https://hackmd.io/_uploads/HygNkPHMfg.png)
 
-
----
 
 
 
@@ -2522,7 +2516,7 @@ chmod +x lien.sh
 ![image](https://hackmd.io/_uploads/H1RghK5MMl.png)
 
 
-- 1. Vérifier que votre service est UP
+- 1. Vérifier que le service est UP
 
 ```promql
 up{job="linkpulse-api"}
@@ -2552,7 +2546,7 @@ rate(links_created_total[1m])
 
 - 4. Nombre total de clics
 
-Générer des clis
+Générer des clics
 
 ```bash
 cat > generate_clicks.sh <<'EOF'
