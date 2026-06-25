@@ -121,21 +121,21 @@ GitHub webhook ──► Jenkins
 - [Phase 3 - Conteneurisation](#phase-3---conteneurisation)
 - [Phase 4 - Jenkins](#phase-4---jenkins)
 - [Phase 5 - SonarQube](#phase-5---sonarqube)
-- [Phase 6 - Terraform](#phase-6---terraform-infrastructure-as-code)
-- [Phase 7 - Prometheus & Grafana](#phase-7---supervision-prometheus--grafana)
 - [Phase 8 - Jenkinsfile et webhooks](#phase-8---jenkinsfile-job-jenkins-et-webhook-github)
-- [Phase 9 - Premier push et vérification](#phase-9---premier-push-et-vérification-complète)
-- [Phase 9 - Correctif CVE Trivy](#phase-9---correctif-cve-trivy)
+- [Phase 9 - Dashboard Grafana as Code](#phase-9---dashboard-grafana-as-code)
+- [Phase 10 - Notifications Slack](#phase-10---notifications-slack)
+- [Phase 11 - Pre-commit hooks](#phase-11---pre-commit-hooks)
+- [Phase 13 - SBOM avec Trivy](#phase-13---sbom-avec-trivy)
+- [Phase 14 - Déploiement Portainer](#phase-14---déploiement-portainer)
 
 ### Partie III - Utilisation et validation
-- [G. Exemples d'utilisation de l'API](#g-exemples-dutilisation-de-lapi)
-- [H. Exemples de sorties attendues](#h-exemples-de-sorties-attendues)
+- [Phase 14 - Gestion et création des liens](#phase-14--gestion-et-création-des-liens)
+- [Vérification dans Prometheus](#vérification-dans-prometheus)
+- [Interface Grafana](#interface-grafana)
 
 ### Partie IV - Extensions et dépannage
-- [Annexe - Déploiement Portainer](#annexe---déploiement-portainer)
 - [I. FAQ et dépannage](#i-faq-et-dépannage)
-- [J. Pour aller plus loin](#j-pour-aller-plus-loin)
-
+  
 ---
 
 ## A. Présentation du lab
@@ -212,7 +212,8 @@ Avant de commencer, repérez ces trois éléments : ils reviennent à plusieurs 
 
 ## E. Architecture cible
 
-![image](https://hackmd.io/_uploads/rJ4wX9rzze.png)
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/060ea7e9-036a-46f7-85af-7ce63e1dc43b" />
+
 
 Tous les conteneurs d'infrastructure (Jenkins, SonarQube, l'application, Prometheus, Grafana) partagent le même réseau Docker `cicd-network`, ce qui leur permet de se contacter **par nom de service** plutôt que par adresse IP.
 
