@@ -260,7 +260,7 @@ pipeline {
         sh '''
           echo "Attente du demarrage des conteneurs (15s)..."
           sleep 15
-          HOST_IP="4.223.169.52"
+          HOST_IP="172.160.228.93"
           echo "Host IP: ${HOST_IP}"
 
           echo -n "1. Linkpulse : "
