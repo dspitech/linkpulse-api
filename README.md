@@ -1,4 +1,4 @@
-# Projet DevOps - E4 ESTIAM - 2026/2026 - Groupe 10
+# Projet DevOps - E4 ESTIAM - 2025/2026 - Groupe 10
 
 
 ## Membres du Groupe 10
