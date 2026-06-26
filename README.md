@@ -7,13 +7,9 @@
 |----|---------------|
 | 1 | LO Pape |
 | 2 | Youssef EL-ATTAOUI |
-| 3 | Morgan AUTIN |
-| 4 | Clovis-Emmanuel KUATE-CHOUTEDJEM |
-| 5 | Olivier POLYNICE |
-| 6 | Elodie IPARRAGUIRRE |
-| 7 | Allan Mendez NGOUAJIO KENFACK |
-| 8 | Ahmad SANOH |
-| 9 | Randy Neil TCHIMKIO KOUAMO |
+| 3 | Olivier POLYNICE |
+| 4 | Elodie IPARRAGUIRRE |
+| 4 | Randy Neil TCHIMKIO KOUAMO |
 
 <div align="center">
 
