@@ -1,4 +1,4 @@
-# LinkPulse - Projet DevOps - E4 ESTIAM Paris -  2026/2026
+# LinkPulse - Projet DevOps 
 
 
 ## Membres du Groupe 10
