@@ -29,12 +29,9 @@
 ![FastAPI](https://img.shields.io/badge/API_Key_Auth-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Jenkins](https://img.shields.io/badge/Rollback-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
 
-
-**Un push sur `main`, et un pipeline Jenkins en 12 étapes build, teste, analyse, sécurise, déploie et supervise automatiquement une vraie API REST - sans aucune intervention manuelle.**
-
 </div>
 
----
+
 
 ## Concept du projet
 
