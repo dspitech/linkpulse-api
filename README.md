@@ -2745,7 +2745,6 @@ docker logs portainer 2>&1 | grep -i token
 | `network with name cicd-network already exists` | Terraform tente de créer le réseau au lieu de le lire | Créer le réseau manuellement en Phase 0 ; vérifier le `data "docker_network"` dans `infra/main.tf` |
 | Jenkins ne voit pas SonarQube | Conteneurs sur des réseaux différents | Vérifier `--network cicd-network` sur Jenkins et SonarQube |
 | Webhook GitHub en échec (timeout) | VM sans IP publique | Exposer Jenkins via ngrok (Phase 8.3) |
-| Stage Trivy rouge | CVE réelles dans l'image | Appliquer le [correctif CVE](#phase-9---correctif-cve-trivy) |
 | Smoke test : `linkpulse-staging` introuvable | Terraform pas encore appliqué ou image absente | Consulter les logs Jenkins stages 9–10 ; `docker ps -a` |
 | SonarQube Quality Gate en attente | Webhook SonarQube → Jenkins mal configuré | URL `http://jenkins:8080/sonarqube-webhook/` (Phase 5.6) |
 | Grafana sans données | Source Prometheus mal configurée | URL interne `http://prometheus:9090` (pas `localhost`) |
