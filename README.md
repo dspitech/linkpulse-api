@@ -9,7 +9,8 @@
 | 2 | Youssef EL-ATTAOUI |
 | 3 | Olivier POLYNICE |
 | 4 | Elodie IPARRAGUIRRE |
-| 4 | Randy Neil TCHIMKIO KOUAMO |
+| 5 | Randy Neil TCHIMKIO KOUAMO |
+| 6 | Allan Mendez NGOUAJIO KENFACK |
 
 <div align="center">
 
